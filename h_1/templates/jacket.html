@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block title %}
+    Куртки
+{% endblock %}
+
+{% block content %}
+<table class="table table-bordered border-primary">
+    <thead>
+        <th>Наименование одежды </th>
+        <th>Размер</th>
+        <th>Цвет</th>
+        <th>Количество</th>
+    </thead>
+    <tbody>
+    {% for i in jacket %}
+        <tr>
+            <td>{{i.name}}</td>
+            <td>{{i.size}}</td>
+            <td>{{i.color}}</td>
+            <td>{{i.count}}</td>
+            
+        </tr>
+    {%endfor%}
+    </tbody>
+</table>
+{% endblock %}

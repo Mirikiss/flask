@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block title %}
+    Одежда
+{% endblock %}
+
+{% block content %}
+<table class="table table-dark table-striped">
+    <thead>
+        <th>Наименование одежды </th>
+        <th>Размер</th>
+        <th>Цвет</th>
+        <th>Количество</th>
+    </thead>
+    <tbody>
+    {% for i in clothes %}
+        <tr>
+            <td>{{i.name}}</td>
+            <td>{{i.size}}</td>
+            <td>{{i.color}}</td>
+            <td>{{i.count}}</td>
+            
+        </tr>
+    {%endfor%}
+    </tbody>
+</table>
+{% endblock %}

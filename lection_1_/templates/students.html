@@ -1,0 +1,23 @@
+{% extends 'base.html'%}
+{% block content %}
+<table class="table table-dark table-striped">
+    <thead>
+        <th>Имя</th>
+        <th>Фамилия</th>
+        <th>возраст</th>
+        <th>средний бал</th>
+    </thead>
+    <tbody>
+    {% for student in students %}
+        <tr>
+            <td>{{student.name}}</td>
+            <td>{{student.surname}}</td>
+            <td>{{student.age}}</td>
+            <td>{{student.reting}}</td>
+            
+        </tr>
+    {%endfor%}
+    </tbody>
+</table>
+{%endblock%}
+
