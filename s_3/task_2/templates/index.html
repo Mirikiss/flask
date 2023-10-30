@@ -6,11 +6,9 @@
     <title>Document</title>
 </head>
 <body>
-    {% if session.name %}
-    <h1>Привет {{ session.name }} !!!</h1>
-    <a href="/checkout"> Выход </a>
-    {% else %}
-    <a href="/check"> Логин </a>
-    {% endif %}
+    {% for i in students %}
+    <p>{{ i.name }} {{ i.firstname }} {{ i.age }}</p>
+    {% endfor %}
+    
 </body>
 </html>
