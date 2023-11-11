@@ -3,7 +3,7 @@ from flask import Flask, request, render_template
 from model import Student, db, Faculty
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///mydatabase.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///mydatabbbase.db'
 db.init_app(app)
 
 
